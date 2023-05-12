@@ -4,19 +4,13 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  font-family: 'New Rail';
+  font-family: 'Helvetica';
   font-size: 18px;
   font-weight: lighter;
   color: black;
 }
 
-@font-face {
-  font-family: 'New Rail';
-  src: url('./assets/new-rail-normal.otf') format('truetype');
-  font-display: block;
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 /* canvas {
   display: block;
@@ -35,6 +29,10 @@ a:hover {
 img {
   width: 100%;
 }
+svg {
+  width: 200px;
+  display: block;
+}
 
 .ime-page {
   position: relative;
@@ -45,7 +43,7 @@ img {
 }
 
 .ime-page-content-container {
-  font-family: 'New Rail';
+  font-family: 'Helvetica';
   font-size: 18px;
   font-weight: lighter;
 }
@@ -55,6 +53,7 @@ img {
   width: 400px;
   list-style: none;
 }
+
 
 .ime-project-container {
   margin-bottom: 50px;
@@ -71,8 +70,16 @@ img {
 
 .ime-project-image {
   width: 200px;
-  display: flex;
+  display: inline-flex;
 }
+.ime-project-svg {
+  width: 200px;
+  display: inline-flex;
+}
+/* #ime-canvas-frame {
+  width: 200px;
+  display: flex;
+} */
 
 .ime-image-shadow {
   border-radius: 20px;
@@ -88,6 +95,19 @@ img {
   -webkit-filter: blur(8px);
   margin-right: 20px;
 }
+.ime-image-blur-1 {
+  border-radius: 20px;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  margin-right: 20px;
+  -webkit-transition: 1s -webkit-filter linear;
+  transition: 1s filter linear;
+}
+.ime-image-blur-1:hover {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
 
 .ime-project-video {
   width: 300px;
@@ -103,7 +123,7 @@ img {
 
 /* MOBILE */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 600px) {
 
   .ime-page-inner {
     padding: 30px;
@@ -136,6 +156,10 @@ img {
   }
 
   .ime-project-image {
+    display: inline-block;
+  }
+  svg {
+    width: 300px;
     display: block;
   }
 
@@ -148,6 +172,11 @@ img {
     width: 100%;
   }
 
+  #logo {
+    width: 300px;  
+    display: inline-block;
+  
+  }
 }
 
 /* FOOTER */
