@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ratking</title>
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link href="control/control-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="header">
+    <a href="index.html">home</a>
+  </div>
+    <div class="header-right">
+      <span style="cursor:pointer" onclick="openNav()">stream</span>
+      <!-- <span>control</span> -->
+  </div>
+
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a target="_blank" href="https://ratking0.bandcamp.com/album/control">bandcamp</a>
+      <a target="_blank" href="https://www.youtube.com/playlist?list=OLAK5uy_m6cN0H10siso0fJN89QPGNHSk4C7wVnQw">youtube</a>
+      <a target="_blank" href="https://open.spotify.com/album/1ok0SuzbVzhw11mRID0d4x?si=6LvbjHwnSiiwBxybsqHNXQ&utm_medium=share&utm_source=linktree&nd=1">spotify</a>
+      <a target="_blank" href="https://music.apple.com/nz/album/control-ep/1629087665">apple music</a>
+      <a target="_blank" href="https://listen.tidal.com/album/233165676">tidal</a>
+    </div>
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    </script>
+
+<main>
+
+		<iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=4289547551/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://ratking0.bandcamp.com/album/control">Control by Ratking</a></iframe>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="control/dist/jquery.ripples.js"></script>
+<script>
+$(document).ready(function() {
+	try {
+		$('body').ripples({
+			resolution: 512,
+	dropRadius: 20,
+	perturbance: 0.04,
+		});
+		$('main').ripples({
+			resolution: 128,
+			dropRadius: 10, //px
+			perturbance: 0.04,
+			interactive: false
+		});
+	}
+	catch (e) {
+		$('.error').show().text(e);
+	}
+
+	$('.js-ripples-disable').on('click', function() {
+		$('body, main').ripples('destroy');
+		$(this).hide();
+	});
+
+	$('.js-ripples-play').on('click', function() {
+		$('body, main').ripples('play');
+	});
+
+	$('.js-ripples-pause').on('click', function() {
+		$('body, main').ripples('pause');
+	});
+
+	// Automatic drops
+	setInterval(function() {
+		var $el = $('main');
+		var x = Math.random() * $el.outerWidth();
+		var y = Math.random() * $el.outerHeight();
+		var dropRadius = 10;
+		var strength = 0.04 + Math.random() * 0.04;
+
+		$el.ripples('drop', x, y, dropRadius, strength);
+	}, 400);
+});
+</script>
+</body>
+</html>
