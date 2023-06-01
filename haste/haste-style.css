@@ -20,7 +20,7 @@ html {
   overflow: hidden;
   padding: 20px;
   font-family: 'Helvetica';
-
+  font-weight: lighter;
 }
 
 .header a {
@@ -37,10 +37,6 @@ html {
 
 }
 
-/* .header a.active {
-text-decoration: underline;
-color: black;
-} */
 
 .header-right {
   position: fixed;
@@ -195,7 +191,6 @@ svg {
   width: 66.6666666667%;
   height: 66.6666666667%;
   padding: 0.5rem;
-  /* background: tomato; */
   color: white;
   text-align: center;
 

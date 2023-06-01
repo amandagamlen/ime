@@ -10,8 +10,6 @@ body {
   color: black;
 }
 
-
-
 /* canvas {
   display: block;
 } */
@@ -77,10 +75,7 @@ svg {
   width: 200px;
   display: inline-flex;
 }
-/* #ime-canvas-frame {
-  width: 200px;
-  display: flex;
-} */
+
 
 .ime-image-shadow {
   border-radius: 20px;

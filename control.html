@@ -10,8 +10,7 @@
     <a href="index.html">home</a>
   </div>
     <div class="header-right">
-      <span style="cursor:pointer" onclick="openNav()">stream</span>
-      <!-- <span>control</span> -->
+      <span onclick="openNav()">stream</span>
   </div>
 
   <div id="myNav" class="overlay">
@@ -35,9 +34,8 @@
     </script>
 
 <main>
-
 		<iframe style="border: 0; width: 350px; height: 350px;" src="https://bandcamp.com/EmbeddedPlayer/album=4289547551/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://ratking0.bandcamp.com/album/control">Control by Ratking</a></iframe>
-
+</main>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 <script src="control/dist/jquery.ripples.js"></script>
@@ -51,7 +49,7 @@ $(document).ready(function() {
 		});
 		$('main').ripples({
 			resolution: 128,
-			dropRadius: 10, //px
+			dropRadius: 10, 
 			perturbance: 0.04,
 			interactive: false
 		});
@@ -73,7 +71,7 @@ $(document).ready(function() {
 		$('body, main').ripples('pause');
 	});
 
-	// Automatic drops
+
 	setInterval(function() {
 		var $el = $('main');
 		var x = Math.random() * $el.outerWidth();

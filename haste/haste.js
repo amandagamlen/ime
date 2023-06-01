@@ -1,22 +1,3 @@
-// $(document).ready(function() {
-//   $("#play").click(function() {
-//     $("#vinyl").addClass("spin-animation");
-//     $("#vinyl").css("animation-play-state", "running");
-//   });
-
-//   $("#stop").click(function() {
-//     $("#vinyl").css("animation-play-state", "paused");
-//   });
-// });
-// var vinyl = document.getElementById('vinyl')
-// var track = document.getElementById('track')
-// var spin = document.getElementById('spin-animation').style.WebkitAnimationPlayState = "running";
-
-// function spin() {
-//   vinyl.classList.add('spin-animation')
-// }
-// track.addEventListener('click', spin)
-
 function play() {
   var audio = document.getElementById('audio')
   var vinyl = document.getElementById('vinyl')
@@ -24,9 +5,6 @@ function play() {
   vinyl.classList.add('spin-animation')
   var svg = document.querySelector('svg')
   svg.classList.add('active')
-  //  var vinyl = document.getElementById("vinyl");
-  // vinyl.classList.add("spin-animation");
-  // vinyl.css("animation-play-state", "running");
   audio.play()
 }
 function pause() {
@@ -56,20 +34,3 @@ function cs_change_music(track) {
   closeNav()
   play()
 }
-
-// var btnDraw = document.getElementById('play')
-// var btnErase = document.getElementById('canvas')
-// var wrapper = document.querySelector('svg')
-
-// function draw() {
-//   wrapper.classList.add('active')
-// }
-
-// function erase() {
-//   wrapper.classList.remove('active')
-// }
-// btnDraw.addEventListener('click', draw, false)
-// btnErase.addEventListener('click', erase, false)
-
-// Play draw animation once
-// setTimeout(draw, 300)

@@ -8,35 +8,38 @@
 
 </head>
 <body>
-  <!-- <div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">
-      <a href="#">HOME</a>
-      <a href="#">STREAM</a> -->
-      <!-- <a href="#">HOME</a> -->
-    <!-- </div>
-  </div> -->
-<div id="content">
+  <div id="content">
+  
+
  
     <label for="thefile" class="file">FEEL MY SYNAPSE
       <input type="button" id="thefile">
     </label>
-
+    
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+       
+        <a target="_blank" href="https://on.soundcloud.com/nPiLp">STREAM</a>
+        <a href="fms/audio/FEEL_MY_SYNAPSE.mp3" download>DOWNLOAD</a>
+        <a href="ime.html">EXIT</a>
+       
+      </div>
+    </div>
     <audio id="audio"><source src="fms/audio/FEEL_MY_SYNAPSE.mp3"></audio>
     <div id="out"></div>
   </div>
-  <div class="footer"> <a href="index.html">EXIT</a></div>
-  <!-- <div class="footer"><span style="cursor:pointer" onclick="openNav()">MENU</span></div> -->
-  <!-- <script>
+  <!-- <div class="footer"><a href="index.html">EXIT</a></div> -->
+ <div class="footer"><span onclick="openNav()">IME</span></div>
+  <script>
     function openNav() {
-      document.getElementById("myNav").style.display = "block";
+      document.getElementById("myNav").style.width = "20%";
     }
     
     function closeNav() {
-      document.getElementById("myNav").style.display = "none";
+      document.getElementById("myNav").style.width = "0%";
     }
-    </script> -->
-<!-- partial -->
+    </script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
 <script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.3/dat.gui.min.js'></script>
